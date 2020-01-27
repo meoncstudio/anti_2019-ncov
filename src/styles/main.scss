@@ -71,12 +71,12 @@ body{
 }
 
 .cover{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.7);
     z-index: -99;
 }
 
@@ -127,3 +127,35 @@ h5, h6, .h5, .h6{
     width: 100%;
     max-width: 400px;
 }
+
+
+@media (min-width: 1200px) {
+    .container{
+        padding: 0px 180px;
+    }
+}
+
+@media (min-width: 980) {
+    .container{
+        margin: 0px 160px;
+    }
+}
+
+@media (min-width: 768px){
+    .container{
+        margin: 0px 160px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container{
+        margin: 0px 160px;
+    }
+}
+ 
+@media (max-width: 480px) {
+    .container{
+        margin: 0px 10px;
+    }
+}
+
