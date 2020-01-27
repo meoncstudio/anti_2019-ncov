@@ -59,7 +59,7 @@ module.exports = {
     hotOnly: false,
     proxy: {
       '/api': {
-        target : 'http://www.probejfury.com/api/',
+        target : 'http://www.probejfury.com/survey/api',
         changeOrigin: true,
         pathRewrite: {
             '^/api': ''
