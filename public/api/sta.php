@@ -9,11 +9,16 @@
     header('Access-Control-Allow-Origin: *');
     header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept');
 
-    $rst = $_REQUEST['rst'];
+    $rst = 0;
+    @$rst = $_REQUEST['rst'];
 
-    SQL("INSERT INTO `sta`(`rst`) VALUES ('$rst')");
+    if($rst != 0){
+        SQL("INSERT INTO `sta`(`rst`) VALUES ('$rst')");
+    }
 
-    echo '{"code": 0}';
+    $count = SQL("SELECT COUNT(*) AS `count` FROM `sta`;");
+
+    echo '{"code": 0, "visit": ' . ($count[0]['count'] + 1390) . '}';
 
 
 ?>

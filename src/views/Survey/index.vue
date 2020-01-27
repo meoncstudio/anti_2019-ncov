@@ -133,6 +133,10 @@ export default {
                 this.results = data.results
                 this.currentQuestions = this.questions[0]
             })
+        axios.get('api/sta.php?rst='+data)
+            .then((res) => {
+                data.visitNumber = res.data.visit;
+        })
     }
 }
 </script>
