@@ -39,10 +39,7 @@ export default {
     data() {
       return {
         reverse: false,
-        activities: [{
-          content: 'loading',
-          timestamp: 'xxxx-xx-xx'
-        }]
+        activities: []
       };
     },
     mounted() {
