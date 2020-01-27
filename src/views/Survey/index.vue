@@ -34,14 +34,13 @@
             
                 <div class="q-steps" v-if="display == 1">
                     <ul class="step">
-                        <li class="step-item" :class="{'active': currentQuestions.id == value.id && display != 2}" v-for="(value) in questions" v-if="value.id > 0">
+                        <li class="step-item" :class="{'active': currentQuestions.id == value.id && display != 2}" v-for="(value) in questions" :key="value.id">
                             <a>Q{{value.id}}</a>
                         </li>
                     </ul>
                 </div>
 
                 <div class="divider text-center" data-content="操作" v-if="display == 2"></div>
-
 
                 <div class="restart" v-if="display == 2">
                     <a class="btn btn-primary" @click="restart()">重新开始</a>
@@ -127,7 +126,7 @@ export default {
                 this.visitNumer = data.visitNumber
             })
         axios
-            .get('/api/data.json')
+            .get('/api/data.json?' + Math.random())
             .then((res) => {
                 const data = res.data
                 this.questions = data.questions
