@@ -73,7 +73,7 @@ export default {
             results: [],
             display: 1,
             visitNumer: 0
-        }  
+        }
     },
     methods: {
         submitQuestion(data) {
