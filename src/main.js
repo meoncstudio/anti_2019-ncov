@@ -1,11 +1,11 @@
 import Vue from "vue";
 import App from "./App.vue";
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
+import Spectre from 'spectre.css';
 import router from "./router";
 import store from "./store";
 
-Vue.use(ElementUI);
+
+Vue.use(Spectre);
 
 Vue.config.productionTip = false;
 
