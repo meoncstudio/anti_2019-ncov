@@ -17,7 +17,7 @@
                         <div class="card-title h5">Question #{{this.currentQuestions.id}}</div>
                         <div class="card-subtitle text-gray">请如实回答该问题以获得更准确的结果</div>
                     </div>
-                    <div class="card-body">{{this.currentQuestions.content}}</div>
+                    <div class="card-body" v-html="this.currentQuestions.content">{{this.currentQuestions.content}}</div>
                     <div class="card-footer"><a class="btn btn-primary" @click="submitQuestion(1)">{{this.currentQuestions.btn1}}</a><a class="btn btn-primary" @click="submitQuestion(2)">{{this.currentQuestions.btn2}}</a></div>
                 </div>
 
@@ -72,7 +72,7 @@ export default {
             results: [],
             display: 1,
             visitNumer: 0
-        }  
+        }
     },
     methods: {
         submitQuestion(data) {
