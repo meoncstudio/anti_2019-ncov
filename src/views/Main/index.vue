@@ -5,9 +5,9 @@
     <div class="container">
         <survey v-if="display==1"></survey>
         <info v-if="display==2"></info>
-        <about v-if="display==3">"</about>
+        <health v-if="display==3"></health>
+        <about v-if="display==4">"</about>
     </div>
-    
     <div class="bg"></div>
     <div class="cover"></div>
 
@@ -20,6 +20,7 @@ import Header from '../../components/Header';
 import Survey from '../Survey';
 import About from '../../components/About';
 import Info from '../../components/Info';
+import Health from '../../components/Health';
 
 export default {
     name: "Main",
@@ -28,7 +29,8 @@ export default {
         'vHeader': Header,
         "Survey": Survey,
         "About": About,
-        'Info': Info
+        'Info': Info,
+        "Health" : Health
     },
     data() {
         return {

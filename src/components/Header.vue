@@ -3,7 +3,8 @@
         <section class="navbar-section container">
             <a class="navbar-brand mr-2" @click="emitFunc(1)">首页</a>
             <a class="btn btn-link" @click="emitFunc(2)">信息中心</a>
-            <a class="btn btn-link" @click="emitFunc(3)">关于</a>
+            <a class="btn btn-link" @click="emitFunc(3)">预防知识</a>
+            <a class="btn btn-link" @click="emitFunc(4)">关于</a>
         </section>
     </header>
 
