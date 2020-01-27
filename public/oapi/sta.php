@@ -1,8 +1,15 @@
 <?php
+    // ini_set('display_errors', 1);
+    // ini_set('display_startup_errors', 1);
+    // error_reporting(E_ALL);
+    display_errors = On
+    error_reporting = E_ALL | E_STRICT
+
+    
     header('Access-Control-Allow-Origin: *');
     header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept');
 
-    $rst = $_REQUEST['rst']
+    $rst = $_REQUEST['rst']；
 
     $json = file_get_contents("sta.json");
     
