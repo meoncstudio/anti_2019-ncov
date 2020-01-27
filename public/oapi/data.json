@@ -1,0 +1,18 @@
+{
+    "questions": [
+        { "id": 1, "content": "你目前有发烧， 腹泻型感冒或咳嗽的症状吗 （发烧定义：37.5°以上）", "btn1": "a 有", "btn2": "b 无", "opt1": 2, "opt2": 3},
+        { "id": 2, "content": "你在14天以内有过在武汉境内停留过吗", "btn1": "a 有", "btn2": "b 无", "rst1": 1, "rst2": 2},
+        { "id": 3, "content": "寒假有回国吗", "btn1": "a 有", "btn2": "b 无", "opt1": 4, "opt2": 5},
+        { "id": 4, "content": "你回国期间有去过武汉或与咳嗽、发烧、腹泻症状的人接触过吗", "btn1": "a 有", "btn2": "b 无", "rst1": 4, "rst2": 4},
+        { "id": 5, "content": "你在14天内有确定和去过武汉或与有咳嗽、发烧的人来往吗", "btn1": "a 有", "btn2": "b 无", "rst1": 4, "rst2": 3},
+        { "id": -1, "content": "error", "btn1": "a", "btn2": "b", "opt1": 2, "opt2": 3}
+    ],
+    "results": [
+        { "id": 1, "content": "请立即前往学校的 Health Center 电话或者邮件联系， 说明症状和自己曾在武汉的停留！"},
+        { "id": 2, "content": "请立即前往学校的 Health Center 或医院检查"},
+        { "id": 3, "content": "请继续观察自己的身体状况， 勤洗手，少摸揉眼睛，减少去人多的地方，查看学校或者当地卫生局发布的消息！ 从现在开始计算14天内若没有发生任何状况则可排除感染可能性"},
+        { "id": 4, "content": "请计算自己距离返校或与武汉同学接触已有几天， 若没有14天，则需要保持警惕，查看最近身体状况，14天内出现症状后查看Type1， 若为出现状况则查看Type3. (Type1： 请立即前往 学校的Health Center 电话或者邮件联系， 说明症状和自己曾在武汉的停留！Type3：请继续观察自己的身体状况， 勤洗手，少摸揉眼睛，减少去人多的地方，查看学校或者当地卫生局发布的消息！ 从现在开始计算14天内若没有发生任何状况则可排除感染可能性)"}
+    ],
+    "about": ["2019-ncoV小战队成员: Jinni, 夏艳, Shuting, jimschenchen", "联系方式: jimschenchen@gmail.com", "信息实时更新中，请随时关注，谢谢！", "本程序以waco health distinct为信息来源 其他地区仅供参考"],
+    "info": [{"content": "团队Sequence信息研究中", "timestamp": "2020-01-26", "color": "#e67e22"}, {"content": "信息收集中", "timestamp": "2020-01-26", "color": "#0bbd87", "size": "large", "type": "primary", "icon": "el-icon-more"}, {"content": "网站建立", "timestamp": "2020-01-26", "color": "#0bbd87"}, {"content": "自查表建立", "timestamp": "2020-01-25", "color": "#0bbd87"}]
+}
