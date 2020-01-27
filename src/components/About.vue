@@ -25,7 +25,7 @@ export default {
     },
     mounted() {
     axios
-        .get('/api/data.json?' + Math.random())
+        .get('api/data.json?' + Math.random())
         .then((res) => {
             const data = res.data
             this.about = data.about
