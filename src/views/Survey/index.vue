@@ -106,15 +106,15 @@ export default {
                     }
                 });
                 this.display = 2;
-                this.updateSta();
+                this.updateSta(result);
             }
         },
         restart() {
             this.currentQuestions = this.questions[0];
             this.display = 1;
         },
-        updateSta() {
-            axios.get('/api/sta.php')
+        updateSta(data) {
+            axios.get('/api/sta.php?rst='+data)
                 .then((res) => {
             })
         }
