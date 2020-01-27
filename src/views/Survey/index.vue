@@ -130,7 +130,7 @@ export default {
             })
         axios.get('api/sta.php')
             .then((res) => {
-                this..visitNumber = res.data.visit;
+                this.visitNumber = res.data.visit;
         })
     }
 }
