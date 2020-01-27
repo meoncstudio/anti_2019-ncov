@@ -4,7 +4,7 @@
         <div class="column col-12">
             <div class="card" style="margin-top: -80px;">
                 <h3>2019-nCov 境外自查表</h3>
-                <h6 class="sta">总计使用人次: {{this.visitNumer}}</h6>
+                <h6 class="sta">总计使用人次: {{this.visitNumber}}</h6>
             </div>
         </div>
 
@@ -71,7 +71,7 @@ export default {
             currentResult: { id: 1, content: 'Loading'},
             results: [],
             display: 1,
-            visitNumer: 0
+            visitNumber: 0
         }
     },
     methods: {
@@ -128,7 +128,7 @@ export default {
                 this.results = data.results
                 this.currentQuestions = this.questions[0]
             })
-        axios.get('api/sta.php')
+        axios.get('http://www.probejfury.com/survey/api/sta.php')
             .then((res) => {
                 this.visitNumber = res.data.visit;
         })
