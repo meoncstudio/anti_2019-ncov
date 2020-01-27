@@ -1,12 +1,21 @@
 <template>
-    <div class="wrap">
-        <h1>关于</h1>
-        <div class="user" v-for="item of about" :key="item.id">{{item}}</div>
+    <div class="columns info">
+
+        <div class="column col-12">
+            <div class="card title">
+                <h3>关于</h3>
+            </div>
+        </div>
+
+        <div class="column col-12">
+            <div class="card" v-for="item of about" :key="item.id">{{item}}</div>
+        </div>
+
     </div>
 </template>
 
 <script>
-import axios from 'axios'
+import axios from 'axios';
 export default {
     name: "About",
     data() {
@@ -26,19 +35,7 @@ export default {
 </script>
 
 <style lang="scss">
-h1 {
-    text-align: center;
-    color: #fff;
-}
+*{
 
-.wrap {
-    width: 100%;
-    margin: auto;
-}
-
-.user{
-    text-align: center;
-    color: #fff;
-    line-height: 20px;
 }
 </style>

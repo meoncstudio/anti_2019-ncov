@@ -1,45 +1,75 @@
 <template>
-<div>
-    <div id="survey">
-        <h1>2019-nCov境外自查表</h1>
-        <div class="survey-wrap">
-            <span class="sta">使用人数统计： {{this.visitNumer}}</span>
-            <el-card class="box-card">
-                <div slot="header" class="clearfix">
-                    <span id="title">2019-nCov境外自查表</span>
-                    <el-button style="float: right; padding: 3px 0" type="text" @click="restart()">重新开始</el-button>
-                </div>
-                <div class="question-wrap" v-if="display==1">
-                    <div id="question">Quesion #{{this.currentQuestions.id}}:</div>
-                    <div>{{this.currentQuestions.content}}</div>
-                    <el-divider></el-divider>
-                    <div class="button-wrap">
-                        <el-button-group>
-                            <el-button class="button" type="primary" icon="el-icon-arrow-left" @click="submitQuestion(1)">{{this.currentQuestions.btn1}}</el-button>
-                            <el-button class="button" type="primary" @click="submitQuestion(2)">{{this.currentQuestions.btn2}}<i class="el-icon-arrow-right el-icon-right"></i></el-button>
-                        </el-button-group>
-                    </div>
-                </div>
-                <div class="result-wrap" v-if="display==2">
-                    <div id="result">Result {{this.currentResult.id}}:</div>
-                    <div>{{this.currentResult.content}}</div>
-                </div>
-            </el-card>
+    <div class="columns survey">
+
+        <div class="column col-12">
+            <div class="card" style="margin-top: -80px;">
+                <h3>2019-nCov 境外自查表</h3>
+                <h6 class="sta">总计使用人次: {{this.visitNumer}}</h6>
+            </div>
         </div>
-        <h5>注：内容均由2019-ncoV小战队成员总结提供， 若有最新消息请点击上方关于按钮联系我们，谢谢！</h5>
-    </div>  
-</div>
+
+        <div class="column col-12">
+            
+            <div class="card">
+                
+                <div class="questions" v-if="display == 1">
+                    <div class="card-header">
+                        <div class="card-title h5">Question #{{this.currentQuestions.id}}</div>
+                        <div class="card-subtitle text-gray">请如实回答该问题以获得更准确的结果</div>
+                    </div>
+                    <div class="card-body">{{this.currentQuestions.content}}</div>
+                    <div class="card-footer"><a class="btn btn-primary" @click="submitQuestion(1)">{{this.currentQuestions.btn1}}</a><a class="btn btn-primary" @click="submitQuestion(2)">{{this.currentQuestions.btn2}}</a></div>
+                </div>
+
+                <div class="answer" v-if="display == 2">
+                    <div class="card-header">
+                        <div class="card-title h5">Result #{{this.currentResult.id}}</div>
+                        <div class="card-subtitle text-gray"></div>
+                    </div>
+                    <div class="card-body">{{this.currentResult.content}}</div>
+                </div>
+
+                
+                <div class="divider text-center" data-content="进度" v-if="display == 1"></div>
+            
+                <div class="q-steps" v-if="display == 1">
+                    <ul class="step">
+                        <li class="step-item" :class="{'active': currentQuestions.id == value.id && display != 2}" v-for="(value) in questions" v-if="value.id > 0">
+                            <a>Q{{value.id}}</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="divider text-center" data-content="操作" v-if="display == 2"></div>
+
+
+                <div class="restart" v-if="display == 2">
+                    <a class="btn btn-primary" @click="restart()">重新开始</a>
+                </div>
+            
+            </div>
+            
+        </div>
+
+        <div class="column col-12">
+            <div class="card">
+                <h6>注：内容均由 2019-ncoV 小战队成员 总结提供，若有最新消息请点击上方关于按钮联系我们，谢谢！</h6>
+                <div>Copyright © 2020 <a href="http://www.jimschenchen.com">jimschenchen</a> from <a href="http://Meonc.studio">MeoncStudio</a>. All rights reserved.</div>
+            </div>
+        </div>
+
+    </div>
 </template>
 
 <script>
-import axios from 'axios'
+import axios from 'axios';
 export default {
     name: "login",
     data() {
         return {
-            currentQuestions: { id: 1, content: 'loading', btn1: 'a 有', btn2: 'b 无', opt1: 2, opt2: 3},
+            currentQuestions: { id: 1, content: 'Loading', btn1: 'A 有', btn2: 'B 无', opt1: 2, opt2: 3},
             questions: [],
-            currentResult: { id: 1, content: 'loading'},
+            currentResult: { id: 1, content: 'Loading'},
             results: [],
             display: 1,
             visitNumer: 0
@@ -110,63 +140,7 @@ export default {
 
 
 <style lang="scss" scoped>
-h1, h5{
-    text-align: center;
-    color: #fff;
-}
-.sta {
-    font-size: 12px;
-    color: #fff;
-}
-#survey {
-    // height: 100vh;
-    // background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-    position: flex;
-    top:0px;
-    left:0px;
-    width:100%;
-    height:100%;
-}
+*{
 
-@media only screen and (max-width: 1024px) {
-    .survey-wrap, .box-card{
-        width: 80vw;
-        margin: auto;
-    }
-    // button
-    .button {
-        line-height: 10px;
-        width: 30vw;
-        margin: auto;
-    }
-    .button-wrap {
-        width: 60vw;
-        margin: auto;
-    }
 }
-@media only screen and (min-width: 1024px) {
-    .survey-wrap, .box-card{
-        width: 40vw;
-        margin: auto;
-    }
-    // button
-    .button {
-        line-height: 10px;
-        width: 15vw;
-        margin: auto;
-    }
-    .button-wrap {
-        width: 30vw;
-        margin: auto;
-    }
-}
-
-.question-wrap, .result-wrap{
-    border-radius: 4px;
-    background-color: rgba(0, 0, 0, .1);
-    margin-bottom: 20px;
-}
-
-
-  
 </style>

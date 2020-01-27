@@ -1,38 +1,39 @@
 <template>
-<div>
-    <h1>2019-nCov境外信息表</h1>
-    <el-card class="box-card">
-        <div slot="header" class="clearfix">
-            <span id="title">2019-nCov境外信息表</span>
-        </div>
-        <div class="block">
-            <div class="radio">
-                排序：
-                <el-radio-group v-model="reverse">
-                <el-radio :label="true">倒序</el-radio>
-                <el-radio :label="false">正序</el-radio>
-                </el-radio-group>
-            </div>
+    <div class="columns info">
 
-            <el-timeline :reverse="reverse">
-                <el-timeline-item
-                v-for="(activity, index) in activities"
-                :key="index"
-                :icon="activity.icon"
-                :type="activity.type"
-                :color="activity.color"
-                :size="activity.size"
-                :timestamp="activity.timestamp">
-                {{activity.content}}
-                </el-timeline-item>
-            </el-timeline>
+        <div class="column col-12">
+            <div class="card title">
+                <h3>信息中心</h3>
+            </div>
         </div>
-    </el-card>
-</div>
+
+        <div class="column col-12">
+            <div class="card">
+                
+                <div class="timeline">
+
+                  <div class="timeline-item" v-for="(activity, index) in activities">
+                    <div class="timeline-left"><a class="timeline-icon tooltip" :class="{'icon-lg': activity.size == 'large'}"></a></div>
+                    <div class="timeline-content">
+                      <div class="tile">
+                        <div class="tile-content">
+                          <p class="tile-subtitle">{{activity.timestamp}}</p>
+                          <p class="tile-title">{{activity.content}}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
 </template>
 
 <script>
-import axios from 'axios'
+import axios from 'axios';
 export default {
     name: "Info",
     data() {
@@ -56,27 +57,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-h1 {
-    text-align: center;
-    color: #fff;
-}
-.block {
-    width: 100%;
-    margin: auto;
-}
-@media only screen and (max-width: 1024px) {
-    .box-card{
-        width: 80vw;
-        margin: auto;
-    }
-}
-@media only screen and (min-width: 1024px) {
-    .box-card{
-        width: 40vw;
-        margin: auto;
-    }
-}
-.radio {
-    padding: 15px;
+*{
+
 }
 </style>
