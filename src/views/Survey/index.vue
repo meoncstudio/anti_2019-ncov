@@ -2,7 +2,7 @@
     <div class="columns survey">
 
         <div class="column col-12">
-            <div class="card" style="margin-top: -80px;">
+            <div class="card title">
                 <h3>2019-nCov 境外自查表</h3>
                 <h6 class="sta">总计使用人次: {{this.visitNumber}}</h6>
             </div>
