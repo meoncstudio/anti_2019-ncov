@@ -114,19 +114,19 @@ export default {
             this.display = 1;
         },
         updateSta(data) {
-            axios.get('/api/sta.php?rst='+data)
+            axios.get('api/sta.php?rst='+data)
                 .then((res) => {
             })
         }
     },
     mounted() {
-        axios.get('/api/show.php')
+        axios.get('api/show.php')
             .then((res) => {
                 const data = res.data
                 this.visitNumer = data.visitNumber
             })
         axios
-            .get('/api/data.json?' + Math.random())
+            .get('api/data.json?' + Math.random())
             .then((res) => {
                 const data = res.data
                 this.questions = data.questions
