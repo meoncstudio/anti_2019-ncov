@@ -120,11 +120,6 @@ export default {
         }
     },
     mounted() {
-        axios.get('api/show.php')
-            .then((res) => {
-                const data = res.data
-                this.visitNumer = data.visitNumber
-            })
         axios
             .get('api/data.json?' + Math.random())
             .then((res) => {
@@ -135,7 +130,7 @@ export default {
             })
         axios.get('api/sta.php')
             .then((res) => {
-                data.visitNumber = res.data.visit;
+                this..visitNumber = res.data.visit;
         })
     }
 }
