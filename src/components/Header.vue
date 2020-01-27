@@ -1,6 +1,6 @@
 <template>
     <header class="navbar" style="z-index: -99999;">
-        <section class="navbar-section container" style="z-index: -99999;">
+        <section class="navbar-section container">
             <a class="navbar-brand mr-2" @click="emitFunc(1)">首页</a>
             <a class="btn btn-link" @click="emitFunc(2)">信息中心</a>
             <a class="btn btn-link" @click="emitFunc(3)">预防知识</a>
