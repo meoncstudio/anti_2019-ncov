@@ -128,7 +128,7 @@ export default {
                 this.results = data.results
                 this.currentQuestions = this.questions[0]
             })
-        axios.get('http://www.probejfury.com/survey/api/sta.php')
+        axios.get('api/sta.php')
             .then((res) => {
                 this.visitNumber = res.data.visit;
         })
