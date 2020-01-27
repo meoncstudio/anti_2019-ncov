@@ -1,8 +1,10 @@
-@import "./normalize.scss";
-@import "node_modules/spectre.css/src/spectre";
 
 $primary-color: #232323;
 $dark-color: #454545;
+
+@import "./normalize.scss";
+@import "node_modules/spectre.css/src/spectre";
+
 
 .container{
     margin: 10px 10px;
