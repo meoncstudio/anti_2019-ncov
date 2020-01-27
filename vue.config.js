@@ -59,10 +59,10 @@ module.exports = {
     hotOnly: false,
     proxy: {
       '/api': {
-        target : 'http://www.probejfury.com/survey/api',
+        target : 'http://www.probejfury.com',
         changeOrigin: true,
         pathRewrite: {
-            '^/api': ''
+            '^/api': 'http://www.probejfury.com/survey/api'
         }
       }
     }, // 设置代理
