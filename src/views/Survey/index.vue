@@ -53,7 +53,7 @@
         <div class="column col-12">
             <div class="card">
                 <h6>注：内容均由 2019-ncoV 小战队成员 总结提供，若有最新消息请点击上方关于按钮联系我们，谢谢！</h6>
-                <div>Copyright © 2020 <a href="http://www.jimschenchen.com">jimschenchen</a> from <a href="http://Meonc.studio">MeoncStudio</a>. All rights reserved.</div>
+                <div>Copyright © 2020 <a href="http://www.jimschenchen.com">jimschenchen</a>, <a href="http://www.cloudyyoung.com/">CloudyYoung</a> from <a href="http://Meonc.studio">MeoncStudio</a>. All rights reserved.</div>
             </div>
         </div>
 
