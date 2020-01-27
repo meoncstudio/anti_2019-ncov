@@ -13,5 +13,9 @@
         { "id": 4, "content": "请计算自己距离返校或与武汉同学接触已有几天， 若没有14天，则需要保持警惕，查看最近身体状况，14天内出现症状后查看Type1， 若为出现状况则查看Type3. (Type1： 请立即前往 学校的Health Center 电话或者邮件联系， 说明症状和自己曾在武汉的停留！Type3：请继续观察自己的身体状况， 勤洗手，少摸揉眼睛，减少去人多的地方，查看学校或者当地卫生局发布的消息！ 从现在开始计算14天内若没有发生任何状况则可排除感染可能性)"}
     ],
     "about": ["2019-ncoV小战队研究人员: Jinni, 夏艳, Shuting <br />2019-ncoV小战队技术人员: jimschenchen, CloudyYoung <br />2019-ncoV小战队公卫人员: Galaxy", "联系方式: jimschenchen@gmail.com", "信息实时更新中，请随时关注，谢谢！", "本程序以waco health distinct为信息来源 其他地区仅供参考"],
-    "info": [{"content": "团队Sequence信息研究中", "timestamp": "2020-01-26", "color": "#e67e22"}, {"content": "信息收集中", "timestamp": "2020-01-26", "color": "#0bbd87", "size": "large", "type": "primary", "icon": "el-icon-more"}, {"content": "网站建立", "timestamp": "2020-01-26", "color": "#0bbd87"}, {"content": "自查表建立", "timestamp": "2020-01-25", "color": "#0bbd87"}]
+    "info": [{"content": "网站样式更新！！！", "timestamp": "2020-01-27", "size": "large"},
+        {"content": "团队Sequence信息研究中", "timestamp": "2020-01-26"}, 
+        {"content": "信息收集中", "timestamp": "2020-01-26", "size": "large"}, 
+        {"content": "网站建立", "timestamp": "2020-01-26"}, 
+        {"content": "自查表建立", "timestamp": "2020-01-25"}]
 }
