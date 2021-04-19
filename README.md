@@ -3,3 +3,5 @@
 ## Description
 
 为2020年2019-ncoV病毒预防做出的自我检测App
+
+![preview.png](preview.png)
